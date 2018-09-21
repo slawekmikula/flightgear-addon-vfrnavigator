@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <name>vfrmap</name>
+    <layout>vbox</layout>
+    <resizable>true</resizable>
+    <x>5</x>
+    <y>5</y>
+    <default-padding>3</default-padding>
+
+    <color>
+        <alpha type="float">1.0</alpha>
+    </color>
+
+    <nasal>
+        <open>
+            var mapDialog = cmdarg();
+            var setTransparency = func(updateDialog){
+                var alpha = (getprop("/gui/map/transparent") or 0);
+                mapDialog.getNode("color/alpha").setValue(1-alpha*0.3);
+                if (updateDialog)
+                {
+                    var n = props.Node.new({ "dialog-name": "vfrmap" });
+                    fgcommand("dialog-close", n);
+                    fgcommand("dialog-show", n);
+                }
+            }
+            setTransparency(0);
+
+            var reinit = func() {
+                setTransparency(1);
+            }
+
+            var transparency_listener = setlistener("/gui/map/transparent", reinit, 0, 0);
+        </open>
+
+        <close>
+            removelistener(transparency_listener);
+        </close>
+    </nasal>
+
+    <group>
+        <layout>hbox</layout>
+        <default-padding>1</default-padding>
+
+        <button>
+            <pref-width>48</pref-width>
+            <pref-height>24</pref-height>
+            <legend>config</legend>
+            <keynum>27</keynum>
+            <border>2</border>
+
+            <binding>
+                <command>dialog-show</command>
+                <dialog-name>vfrmap-settings</dialog-name>
+            </binding>
+        </button>
+        <button>
+            <name>zoomout</name>
+            <legend>-</legend>
+            <pref-width>22</pref-width>
+            <pref-height>22</pref-height>
+
+            <binding>
+                <command>property-adjust</command>
+                <property>/gui/map/zoom</property>
+                <min>0</min>
+                <step>-1</step>
+            </binding>
+        </button>
+
+        <text>
+            <label>MMM</label>
+            <pref-width>22</pref-width>
+            <format>%d</format>
+            <property>/gui/map/zoom</property>
+            <live>true</live>
+        </text>
+
+        <button>
+            <name>zoomin</name>
+            <legend>+</legend>
+            <pref-width>22</pref-width>
+            <pref-height>22</pref-height>
+
+            <binding>
+                <command>property-adjust</command>
+                <property>/gui/map/zoom</property>
+                <step>1</step>
+                <max>12</max>
+            </binding>
+        </button>
+
+        <empty><stretch>1</stretch></empty>
+
+        <text>
+            <label>Map</label>
+        </text>
+
+        <empty><stretch>1</stretch></empty>
+
+        <button>
+            <pref-width>22</pref-width>
+            <pref-height>22</pref-height>
+            <legend>X</legend>
+            <keynum>27</keynum>
+            <border>2</border>
+
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+
+    <hrule/>
+
+    <group>
+        <layout>hbox</layout>
+        <stretch>true</stretch>
+        <halign>fill</halign>
+
+        <group>
+            <layout>vbox</layout>
+            <stretch>true</stretch>
+
+            <map>
+                <halign>fill</halign>
+                <valign>fill</valign>
+                <stretch>true</stretch>
+                <pref-height>200</pref-height>
+                <pref-width>300</pref-width>
+                <property>/gui/map</property>
+            </map>
+        </group>
+
+    </group>
+</PropertyList>

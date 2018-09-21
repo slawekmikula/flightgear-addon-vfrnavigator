@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <name>vfrstarter</name>
+    <layout>vbox</layout>
+    <resizable>false</resizable>
+    <modal>false</modal>
+    <x>-5</x>
+	  <y>-5</y>
+    <default-padding>3</default-padding>
+
+    <color>
+        <alpha type="float">0.7</alpha>
+    </color>
+
+    <group>
+        <layout>hbox</layout>
+        <default-padding>1</default-padding>
+
+        <button>
+            <pref-width>27</pref-width>
+            <pref-height>22</pref-height>
+            <legend>MP</legend>
+            <keynum>27</keynum>
+            <border>2</border>
+
+            <binding>
+                <command>dialog-show</command>
+                <dialog-name>vfrmap</dialog-name>
+            </binding>
+        </button>
+
+        <button>
+            <pref-width>27</pref-width>
+            <pref-height>22</pref-height>
+            <legend>PL</legend>
+            <keynum>27</keynum>
+            <border>2</border>
+
+            <binding>
+                <command>dialog-show</command>
+                <dialog-name>vfrtable</dialog-name>
+            </binding>
+        </button>
+
+        <button>
+            <pref-width>27</pref-width>
+            <pref-height>22</pref-height>
+            <legend>SW</legend>
+            <keynum>27</keynum>
+            <border>2</border>
+
+            <binding>
+                <command>dialog-show</command>
+                <dialog-name>stopwatch-dialog</dialog-name>
+            </binding>
+        </button>
+
+        <button>
+            <pref-width>27</pref-width>
+            <pref-height>22</pref-height>
+            <legend>RM</legend>
+            <keynum>27</keynum>
+            <border>2</border>
+
+            <binding>
+                <command>dialog-show</command>
+                <dialog-name>route-manager</dialog-name>
+            </binding>
+        </button>
+
+        <empty><stretch>1</stretch></empty>
+
+        <button>
+            <pref-width>22</pref-width>
+            <pref-height>22</pref-height>
+            <legend>X</legend>
+            <keynum>27</keynum>
+            <border>2</border>
+
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+
+</PropertyList>

@@ -1,0 +1,4 @@
+- wczytywanie planu lotu z PLN
+- wczytywanie planu lotu z VfrFlight
+- panel planu lotu (vfr)
+- wyświetlanie kursu wg. aktualnego leg'a planu logu

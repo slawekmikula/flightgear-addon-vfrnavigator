@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <name>vfrtable</name>
+    <layout>vbox</layout>
+    <resizable>true</resizable>
+    <default-padding>3</default-padding>
+
+</PropertyList>
