@@ -21,7 +21,6 @@
             <pref-width>27</pref-width>
             <pref-height>22</pref-height>
             <legend>MP</legend>
-            <keynum>27</keynum>
             <border>2</border>
 
             <binding>
@@ -34,7 +33,6 @@
             <pref-width>27</pref-width>
             <pref-height>22</pref-height>
             <legend>PL</legend>
-            <keynum>27</keynum>
             <border>2</border>
 
             <binding>
@@ -47,7 +45,6 @@
             <pref-width>27</pref-width>
             <pref-height>22</pref-height>
             <legend>SW</legend>
-            <keynum>27</keynum>
             <border>2</border>
 
             <binding>
@@ -59,8 +56,30 @@
         <button>
             <pref-width>27</pref-width>
             <pref-height>22</pref-height>
+            <legend>R</legend>
+            <border>2</border>
+
+            <binding>
+                <command>dialog-show</command>
+                <dialog-name>radios</dialog-name>
+            </binding>
+        </button>
+
+        <button>
+            <pref-width>27</pref-width>
+            <pref-height>22</pref-height>
+            <legend>A</legend>
+            <border>2</border>
+
+            <binding>
+				<command>ATC-freq-search</command>
+			</binding>
+        </button>
+
+        <button>
+            <pref-width>27</pref-width>
+            <pref-height>22</pref-height>
             <legend>RM</legend>
-            <keynum>27</keynum>
             <border>2</border>
 
             <binding>
@@ -75,7 +94,6 @@
             <pref-width>22</pref-width>
             <pref-height>22</pref-height>
             <legend>X</legend>
-            <keynum>27</keynum>
             <border>2</border>
 
             <binding>

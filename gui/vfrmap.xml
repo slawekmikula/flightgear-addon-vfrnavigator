@@ -4,6 +4,7 @@
     <name>vfrmap</name>
     <layout>vbox</layout>
     <resizable>true</resizable>
+    <modal>false</modal>
     <x>5</x>
     <y>5</y>
     <default-padding>3</default-padding>
@@ -133,5 +134,46 @@
             </map>
         </group>
 
+    </group>
+
+    <group>
+        <layout>hbox</layout>
+        <default-padding>2</default-padding>
+        <text>
+            <label>MMMMM</label>
+            <format>%s</format>
+            <property>/autopilot/route-manager/wp[0]/id</property>
+            <live>true</live>
+        </text>
+        <text>
+            <label>MMMMM</label>
+            <format>B %.0f</format>
+            <property>/autopilot/route-manager/wp[0]/true-bearing-deg</property>
+            <live>true</live>
+        </text>
+        <text>
+            <label>MMMMM</label>
+            <format>D %.2f nm</format>
+            <property>/autopilot/route-manager/wp[0]/dist</property>
+            <live>true</live>
+        </text>
+        <text>
+            <label>MMMMM</label>
+            <format>ETA %s</format>
+            <property>/autopilot/route-manager/wp[0]/eta</property>
+            <live>true</live>
+        </text>
+        <text>
+            <label>MMMMM</label>
+            <format>WB %.0f</format>
+            <property>/environment/wind-from-heading-deg</property>
+            <live>true</live>
+        </text>
+        <text>
+            <label>MMMMM</label>
+            <format>WS %.0f</format>
+            <property>/environment/wind-speed-kt</property>
+            <live>true</live>
+        </text>
     </group>
 </PropertyList>
