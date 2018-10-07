@@ -1,5 +1,5 @@
 #
-# Starter addon
+# VFR Navigator addon
 #
 # Slawek Mikula, August 2018
 
@@ -16,11 +16,11 @@ var main = func( addon ) {
     }
 
     var data = {
-	    label   : "VFR Starter",
+	  label   : "VFR Starter",
       name    : "vfrstarter",
       binding : { command : "dialog-show", "dialog-name" : "vfrstarter" },
       enabled : "true",
-	  };
+	};
 
     foreach(var item; props.getNode("/sim/menubar/default/menu[2]").getChildren("item")) {
       if (item.getValue("name") == "vfrstarter") {
@@ -28,7 +28,23 @@ var main = func( addon ) {
       }
     }
 
-	  props.globals.getNode("/sim/menubar/default/menu[2]").addChild("item").setValues(data);
+	props.globals.getNode("/sim/menubar/default/menu[2]").addChild("item").setValues(data);
 
-	  fgcommand("gui-redraw");
+	fgcommand("gui-redraw");
+
+    var fdm_init_listener = _setlistener("/sim/signals/fdm-initialized", func {
+        removelistener(fdm_init_listener);
+
+        if (getprop("/addons/by-id/" ~ my_addon_id ~ "/showvfrstarter") == 1) {
+            gui.showDialog("vfrstarter");
+        }
+    });
+
+    var reinit_listener = _setlistener("/sim/signals/reinit", func {
+        removelistener(reinit_listener);
+
+        if (getprop("/addons/by-id/" ~ my_addon_id ~ "/showvfrstarter") == 1) {
+            gui.showDialog("vfrstarter");
+        }
+    });
 }

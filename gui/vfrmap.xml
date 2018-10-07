@@ -10,7 +10,7 @@
     <default-padding>3</default-padding>
 
     <color>
-        <alpha type="float">1.0</alpha>
+        <alpha type="float">0.7</alpha>
     </color>
 
     <nasal>
@@ -26,7 +26,6 @@
                     fgcommand("dialog-show", n);
                 }
             }
-            setTransparency(0);
 
             var reinit = func() {
                 setTransparency(1);
@@ -71,8 +70,8 @@
         </button>
 
         <text>
-            <label>MMM</label>
-            <pref-width>22</pref-width>
+            <label>M</label>
+            <pref-width>16</pref-width>
             <format>%d</format>
             <property>/gui/map/zoom</property>
             <live>true</live>
@@ -89,6 +88,18 @@
                 <property>/gui/map/zoom</property>
                 <step>1</step>
                 <max>12</max>
+            </binding>
+        </button>
+
+        <button>
+            <name>center_aircraft</name>
+            <legend>C</legend>
+            <pref-width>22</pref-width>
+            <pref-height>22</pref-height>
+
+            <binding>
+                <command>property-toggle</command>
+                <property>/gui/map/centre-on-aircraft</property>
             </binding>
         </button>
 
@@ -163,17 +174,21 @@
             <property>/autopilot/route-manager/wp[0]/eta</property>
             <live>true</live>
         </text>
-        <text>
-            <label>MMMMM</label>
-            <format>WB %.0f</format>
-            <property>/environment/wind-from-heading-deg</property>
-            <live>true</live>
-        </text>
-        <text>
-            <label>MMMMM</label>
-            <format>WS %.0f</format>
-            <property>/environment/wind-speed-kt</property>
-            <live>true</live>
-        </text>
+        <group>
+            <layout>hbox</layout>
+            <default-padding>2</default-padding>
+            <text>
+                <label>MMM</label>
+                <format>W %.0f</format>
+                <property>/environment/wind-from-heading-deg</property>
+                <live>true</live>
+            </text>
+            <text>
+                <label>MM</label>
+                <format>/%.0f</format>
+                <property>/environment/wind-speed-kt</property>
+                <live>true</live>
+            </text>
+        </group>
     </group>
 </PropertyList>
