@@ -26,7 +26,7 @@ In main menu Position -> VFR Starter. When activated small window will appear in
 
 # History
 
-- 1.0 - first public version on github
+- 1.0.0 - first public version on github
 
 
 # Authors
