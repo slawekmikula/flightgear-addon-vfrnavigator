@@ -15,11 +15,11 @@
 
     <nasal>
         <open>
-            setprop("/addons/by-id/com.slawekmikula.flightgear.VfrNavigator/showvfrstarter", 1);
+            setprop("/addons/by-id/com.slawekmikula.flightgear.VfrNavigator/addon-devel/showvfrstarter", 1);
         </open>
 
         <close>
-            setprop("/addons/by-id/com.slawekmikula.flightgear.VfrNavigator/showvfrstarter", 0);
+            setprop("/addons/by-id/com.slawekmikula.flightgear.VfrNavigator/addon-devel/showvfrstarter", 0);
         </close>
     </nasal>
 

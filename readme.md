@@ -1,37 +1,37 @@
 # About
 
-Flightgear VFR flight helper. Mostly helps with VFR flights offering map, route manager interface and helpers to get quickly to most common settings
+Flightgear VFR flight helper. Helps with VFR flights by offering simplified map,
+route manager interface and helpers to get quickly to most common settings.
 
 # Running
 
-- extract zip (if downloaded as a zip) to a given location. For example let's say we have /myfolder/addons/vfrnavigator with contents of the navigator addon.
-- run flightgear with --addon directive. WARNING this is not "additional settings" window in the launcher ! you have to modify windows shortcut or linux startup script for example to looks like this (in linux):
+* extract zip (if downloaded as a zip) to a given location. For example
+  let's say we have /myfolder/addons/vfrnavigator with contents of the navigator
+  addon.
+* run flightgear with --addon directive as in the example below or use Launcher
+  and go to "Add-Ons" section. There add this addon folder to Add-Ons and enable
+  it (checkbox at the line of the addon).
 
 Code:
 ```
-    ./fgbin/bin/fgfs --fg-root=./fgdata --launcher --prop:/sim/fg-home=/myfolder/flightgear/fghome --addon="/myfolder/addons/vfrnavigator"
+  fgfs --fg-root=./fgdata --launcher --prop:/sim/fg-home=/myfolder/flightgear/fghome --addon="/myfolder/addons/vfrnavigator"
 ```
 
 # Running
 
-In main menu Position -> VFR Starter. When activated small window will appear in the upper right corner with links to most common used functions:
-
-* MP - map - small map in lower left corner with route navigation, access to configuration (config button), zoom settings (buttons +/-) and quick action center on the aircraft (C button). On the bottom you can see information about current waypoint name, bearing (B), distance (D), ETA and wind direction/speed (W).
-* PL - flightplan - in upper left corner
-* SW - stopwatch
-* R - radio panel
-* A - ATC in ranges search
-* RM - route manager activation
-
+In main menu Position -> VFR Starter. When activated small window will appear
+in the upper right corner with links to most common used functions. More info
+in the document `usage` in the doc folder.
 
 # History
 
-- 1.0.0 - first public version on github
-
+* 1.0.0 - first public version on github
+* 1.1.0 - structure and initialization changes according to add-ons API manual,
+          usage documentation
 
 # Authors
 
-- Slawek Mikula - source code
+* Slawek Mikula - source code
 
 # Links
 

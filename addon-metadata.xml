@@ -9,7 +9,7 @@
   <addon>
     <identifier type="string">com.slawekmikula.flightgear.VfrNavigator</identifier>
     <name type="string">VFR Navigator</name>
-    <version type="string">1.0.0</version>
+    <version type="string">1.1.0</version>
 
     <authors>
       <author>
