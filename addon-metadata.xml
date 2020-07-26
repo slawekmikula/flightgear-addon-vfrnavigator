@@ -24,8 +24,23 @@
     </short-description>
 
     <long-description type="string">
-      VFR helper dialogs
+      This add-on provides quick access menu to access common views and shortcuts
+      with modified version of the map view especially for small resolution displays.
     </long-description>
+
+    <localized>
+      <pl>
+        <short-description type="string">
+          Pomoc w nawigacji VFR
+        </short-description>
+
+        <long-description type="string">
+          To rozszerzenie dostarcza menu szybkiego dostępu do przydatnych widoków
+          i skrótów dostępu wraz ze zmodyfikowanym widokiem mapy dostosowanym
+          specyficznie dla wyświetlaczy o niskich rozdzielczościach.
+        </long-description>
+      </pl>
+    </localized>
 
     <license>
       <designation type="string">
@@ -54,7 +69,7 @@
       </download>
 
       <support type="string">
-        http://wiki.flightgear.org/addon-vfrnavigator
+        https://github.com/slawekmikula/fg-addon-vfrnavigator/issues
       </support>
 
       <code-repository type="string">

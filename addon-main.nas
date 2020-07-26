@@ -5,9 +5,7 @@
 
 var main = func( addon ) {
     var root = addon.basePath;
-    var my_addon_id  = "com.slawekmikula.flightgear.VfrNavigator";
-    var my_version   = getprop("/addons/by-id/" ~ my_addon_id ~ "/version");
-    var my_root_path = getprop("/addons/by-id/" ~ my_addon_id ~ "/path");
+    var my_addon_id  = addon.id;
     var my_settings_root_path = "/addons/by-id/" ~ my_addon_id ~ "/addon-devel/";
 
     # persistent save of enable flag
