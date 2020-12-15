@@ -33,8 +33,6 @@ in the document `usage` in the doc folder.
 
 * Slawek Mikula - source code
 
-# Links
-
 # License
 
 GNU General Public License version 2
